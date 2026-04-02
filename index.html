@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Intelligence Mesh</title>
+  <meta name="description" content="Connecting agents and skills for quality engineering. Layered learning for AI-assisted testing with GitHub Copilot and Claude Code.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="red">Test</span><span class="purple">Intelligence</span>&nbsp;Mesh
+    </a>
+    <ul class="nav-links">
+      <li><a href="agents.html">Agents</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="hero-eyebrow">CGI Quality Engineering</p>
+    <h1><span class="red">Test</span> <span class="purple">Intelligence</span><br>Mesh</h1>
+    <p class="hero-desc">
+      Connecting agents and skills for quality engineering.
+      One fiber at a time, building the mesh that scales human-in-the-loop AI testing.
+    </p>
+    <div class="hero-actions">
+      <a href="agents.html" class="btn btn-red">Explore Agents</a>
+      <a href="blog.html" class="btn btn-ghost-white">Read the Blog</a>
+    </div>
+  </section>
+
+  <!-- What is this -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">What is it</p>
+      <h2 class="section-title">AI for quality engineering, built for humans</h2>
+      <p class="section-desc">
+        Test Intelligence Mesh is a layered learning system that connects AI agents,
+        prompting skills, and quality engineering practices. It gives you concrete
+        tools and instructions — not theory.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="feature-icon red">&#9670;</div>
+          <h3>One move at a time</h3>
+          <p>Each agent is a single learnable skill — full value on its own. Practice it until you can direct it precisely. Then add the next one.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon purple">&#11041;</div>
+          <h3>Combos unlock gradually</h3>
+          <p>Skills combine. The Test Scenario Explorer pairs with the Test Code Generator. The Gap Advisor chains with the Risk Analyzer. You choose when you&rsquo;re ready.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">&#9711;</div>
+          <h3>You set the pace</h3>
+          <p>No graduation schedule. Speed comes from practice, not permission. When a skill feels automatic, that&rsquo;s when you add the combo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured agents -->
+  <section class="section section-grey">
+    <div class="container">
+      <p class="section-label">Agents</p>
+      <h2 class="section-title">Pick up where you are</h2>
+      <p class="section-desc">
+        Six agents across three learning levels. Each one is practical, documented,
+        and ready to try in your tool of choice.
+      </p>
+
+      <div id="featured-agents" class="cards-grid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <a href="agents.html" class="btn btn-red">All six agents &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent blog posts -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Blog</p>
+      <h2 class="section-title">From the mesh</h2>
+
+      <div id="recent-posts" class="blog-list">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <a href="blog.html" class="btn btn-outline">All posts &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">
+      <span class="red">Test</span><span class="purple">Intelligence</span> Mesh
+    </div>
+    <p>
+      By CGI Quality Engineering &nbsp;&middot;&nbsp;
+      <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+    </p>
+  </footer>
+
+  <script src="site.js"></script>
+  <script>
+    // Render featured agents (first 3)
+    const featuredEl = document.getElementById('featured-agents');
+    AGENTS.slice(0, 3).forEach(agent => {
+      featuredEl.insertAdjacentHTML('beforeend', renderAgentCard(agent));
+    });
+
+    // Render recent posts
+    const postsEl = document.getElementById('recent-posts');
+    POSTS.forEach(post => {
+      postsEl.insertAdjacentHTML('beforeend', renderPostItem(post));
+    });
+
+    setActiveNav('index.html');
+  </script>
+
+</body>
+</html>

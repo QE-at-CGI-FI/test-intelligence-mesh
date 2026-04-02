@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agents — Test Intelligence Mesh</title>
+  <meta name="description" content="Six AI agents for quality engineering, with step-by-step guides for GitHub Copilot and Claude Code. Organized by learning level L1–L3.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="red">Test</span><span class="purple">Intelligence</span>&nbsp;Mesh
+    </a>
+    <ul class="nav-links">
+      <li><a href="agents.html">Agents</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Agents</h1>
+      <p>
+        Six practical agents for quality engineering — each with a use guide for
+        GitHub Copilot and Claude Code. Start at L1. Build from there.
+      </p>
+    </div>
+  </header>
+
+  <!-- Level key -->
+  <section class="section section-grey" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+    <div class="container">
+      <p style="font-size:0.85rem;color:var(--grey-600);max-width:640px;line-height:1.7;margin-bottom:1.75rem;">
+        Skills are learned one at a time and practiced until they feel automatic. Combos are unlocked when you&rsquo;re ready — not on a schedule. Chains become routines only once the individual moves are solid. <strong>You decide when you&rsquo;re speed-ready.</strong>
+      </p>
+      <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+        <div>
+          <span class="level-badge level-l1">L1 &middot; Solo</span>
+          <p style="font-size: 0.85rem; color: var(--grey-600); margin-top: 0.5rem; max-width: 220px; line-height: 1.5;">
+            A single move. Full value on its own. Practice until you can direct it precisely.
+          </p>
+        </div>
+        <div>
+          <span class="level-badge level-l2">L2 &middot; Combo</span>
+          <p style="font-size: 0.85rem; color: var(--grey-600); margin-top: 0.5rem; max-width: 220px; line-height: 1.5;">
+            Works alone, but more powerful when paired with an L1 skill you&rsquo;ve already practiced.
+          </p>
+        </div>
+        <div>
+          <span class="level-badge level-l3">L3 &middot; Chain</span>
+          <p style="font-size: 0.85rem; color: var(--grey-600); margin-top: 0.5rem; max-width: 220px; line-height: 1.5;">
+            Designed for workflow integration. Most powerful when sequenced with other skills.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter + grid -->
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All agents</button>
+        <button class="filter-btn" data-filter="L1">L1 &middot; Solo</button>
+        <button class="filter-btn" data-filter="L2">L2 &middot; Combo</button>
+        <button class="filter-btn" data-filter="L3">L3 &middot; Chain</button>
+      </div>
+
+      <div id="agents-grid" class="cards-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Two tools section -->
+  <section class="section section-grey">
+    <div class="container">
+      <p class="section-label">Two tools</p>
+      <h2 class="section-title">GitHub Copilot and Claude Code</h2>
+      <p class="section-desc">Every agent has instructions for both. They&rsquo;re complementary — use whichever fits the moment.</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div class="feature">
+          <div class="feature-icon purple">&#9670;</div>
+          <h3>GitHub Copilot</h3>
+          <p>Deeply integrated in VS Code. Great when you want context from your open editor, workspace files, or terminal history. Your AI pair programmer — always nearby.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon red">&#9670;</div>
+          <h3>Claude Code</h3>
+          <p>A CLI tool that takes a wider view. Reads multiple files, creates and edits code, and runs commands. Use it when you need an agent to act on the codebase, not just advise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">
+      <span class="red">Test</span><span class="purple">Intelligence</span> Mesh
+    </div>
+    <p>
+      By CGI Quality Engineering &nbsp;&middot;&nbsp;
+      <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+    </p>
+  </footer>
+
+  <script src="site.js"></script>
+  <script>
+    renderAgentsList(null);
+    initAgentsFilter();
+    setActiveNav('agents.html');
+  </script>
+
+</body>
+</html>
