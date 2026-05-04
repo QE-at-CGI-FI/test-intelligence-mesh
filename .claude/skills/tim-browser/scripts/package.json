@@ -1,0 +1,7 @@
+{
+  "name": "@tim/tim-browser-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Scoped package.json that keeps tim-browser helper scripts in CommonJS despite the repo root being ESM."
+}
